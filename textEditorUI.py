@@ -10,12 +10,25 @@ def saveFunc():
 	file.write(t)
 	file.close()
 
+def openFunc():
+	global text
+
+	openFile = tkinter.filedialog.askopenfilename()
+	print(openFile)
+	file = open(openFile, "r")
+	newtext = file.read()
+	text.insert("end", newtext)
+	print(newtext)
+
 top = tkinter.Tk()
 
 text = tkinter.Text(top)
 text.grid()
 
-button = tkinter.Button(top, text = "Save", command = saveFunc)
-button.grid()
+buttonSave = tkinter.Button(top, text = "Save", command = saveFunc)
+buttonSave.grid()
+
+buttonOpen = tkinter.Button(top, text = "Open", command = openFunc)
+buttonOpen.grid()
 
 top.mainloop()
