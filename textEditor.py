@@ -5,11 +5,10 @@ def askInput():
 	print("Welcome to Whelan's text editor")
 	print("Menu Keys: Open File = o; New File = n; Close Program = x")
 	selection = input("Please enter a key: ")
-	if selection == 'x':
+	if selection == "x":
 		sys.exit(0)
 	elif selection == 'n':
 		newFile()
-		#writeFile()
 	elif selection == 'o':
 		fileName = ''
 		openFile(fileName)
