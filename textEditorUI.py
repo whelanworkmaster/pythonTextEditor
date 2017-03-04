@@ -21,14 +21,15 @@ def openFunc():
 	print(newtext)
 
 top = tkinter.Tk()
+top.title("Text Editor")
 
 text = tkinter.Text(top)
-text.grid()
+text.pack()
 
 buttonSave = tkinter.Button(top, text = "Save", command = saveFunc)
-buttonSave.grid()
+buttonSave.pack()
 
 buttonOpen = tkinter.Button(top, text = "Open", command = openFunc)
-buttonOpen.grid()
+buttonOpen.pack()
 
 top.mainloop()
